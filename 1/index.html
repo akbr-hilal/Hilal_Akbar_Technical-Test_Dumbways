@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Price Calculation Based On Quantity</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <table width="400" border="1" cellpadding="5" id="calculator">
+    <tr>
+      <td bgcolor="#CCCCCC"><strong>Item</strong> </td>
+      <td width="50" bgcolor="#CCCCCC"><strong>Quantity</strong></td>
+      <td width="50" bgcolor="#CCCCCC"><strong>Price</strong></td>
+      <td width="50" bgcolor="#CCCCCC"><strong>Total</strong></td>
+      <td width="50" bgcolor="#CCCCCC"><strong>Discount Amount</strong></td>
+      <td width="50" bgcolor="#CCCCCC"><strong>Final Pay</strong></td>
+    </tr>
+    <tr>
+      <td>Item A</td>
+      <td><input name="qnt_a" type="text" id="qty_a" value="0" size="3" /></td>
+      <td><input type="text" id="amount_a" value="4550" disabled size="3"></td>
+      <td><input type="text" id="total-pay_a" disabled size="3"></td>
+      <td><input type="text" id="discount-amount_a" disabled size="3"></td>
+      <td><input type="text" id="final-pay_a" disabled></td>
+    </tr>
+    <tr>
+      <td>Item B</td>
+      <td><input name="qnt_b" type="text" id="qty_b" value="0" size="3" /></td>
+      <td><input type="text" id="amount_b" value="5330" disabled size="3"></td>
+      <td><input type="text" id="total-pay_b" disabled size="3"></td>
+      <td><input type="text" id="discount-amount_b" disabled size="3"></td>
+      <td><input type="text" id="final-pay_b" disabled></td>
+    </tr>
+    <tr>
+      <td>Item C</td>
+      <td><input name="qty_3" type="text" id="qty_c" value="0" size="3"  /></td>
+      <td><input type="text" id="amount_c" value="8653" disabled size="3"></td>
+      <td><input type="text" id="total-pay_c" disabled size="3"></td>
+      <td></td>
+      <td><input type="text" id="final-pay_c" disabled></td>
+    </tr>
+    <tr>
+      <td bgcolor="#CCCCCC">&nbsp;</td>
+      <td bgcolor="#CCCCCC">&nbsp;</td>
+      <td bgcolor="#CCCCCC">&nbsp;</td>
+      <td bgcolor="#CCCCCC">&nbsp;</td>
+      <td align="right" bgcolor="#CCCCCC"><strong>Total:</strong></td>
+      <td bgcolor="#CCCCCC"><input type="text" id="finish-total" disabled></td>
+    </tr>
+  </table>
+  <button type="submit" class="calculate">Calculate</button>
+  <input type="reset" value="Reset" class="reset">
+
+</body>
+</html>
