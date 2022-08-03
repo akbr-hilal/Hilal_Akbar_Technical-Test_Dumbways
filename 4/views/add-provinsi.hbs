@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Provinsi</title>
+  {{!-- Bootstrap CSS --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Add Provinsi</h1>
+    <div class="d-flex justify-content-center">
+      <form action="/add-provinsi" method="post" enctype="multipart/form-data" style="width: 400px;" >
+        <div class="mb-3">
+          <label for="inputNameProv" class="form-label">Nama Provinsi</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputNameProv"
+              name="inputNameProv"
+            />  
+        </div>
+        <div class="mb-3">
+          <label for="inputDiresmikanProv" class="form-label">Diresmikan</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputDiresmikanProv"
+              name="inputDiresmikanProv"
+            />  
+        </div>
+         <div class="mb-3">
+          <label for="inputPulauProv" class="form-label">Pulau</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputPulauProv"
+              name="inputPulauProv"
+            />  
+        </div>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label"
+                >Upload Image</label
+            >
+            <input
+                type="file"
+                name="inputImageProv"
+                id="formFile"
+                class="form-control"
+            />
+        </div>
+        <div class="mb-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end col-12">
+              <button type="submit" class="btn btn-primary px-4 col-12">
+                Submit
+              </button>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div style="width: 400px;" class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <a href="/" class="col-12">
+          <button class="btn btn-danger px-4 col-12">
+            Cancel
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  {{!-- Bootstrap JS --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

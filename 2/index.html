@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function printArr(arr,n)
+    {
+        for (let i = 0; i < n; i++)
+            document.write(arr[i]);
+    }
+ 
+    function compare(num1,num2)
+    {
+        let A = num1.toString();
+        let B = num2.toString();
+ 
+        return (A + B).localeCompare(B + A);
+    }
+
+    function printSmallest(N,arr)
+    {
+        for (let i = 0; i < N; i++)
+        {
+            for (let j = i + 1; j < N; j++)
+            {
+                if (compare(arr[i], arr[j]) > 0)
+                {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        printArr(arr,N);
+    }
+
+    let arr = [ 20, 12, 35, 11, 17, 9, 58, 23, 69, 21 ];
+    let N = arr.length;
+    printSmallest(N,arr);
+</script>
+</head>
+<body>
+  
+</body>
+</html>
