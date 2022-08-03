@@ -4,44 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Provinsi</title>
+  <title>Add Kabupaten Kota</title>
   {{!-- Bootstrap CSS --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center">Edit Provinsi {{data.name}}</h1>
+    <h1 class="text-center">Add Kabupaten Kota</h1>
     <div class="d-flex justify-content-center">
-      <form action="/edit/{{data.id}}" method="post" enctype="multipart/form-data" style="width: 400px;" >
+      <form action="/add-kabkot" method="post" enctype="multipart/form-data" style="width: 400px;" >
         <div class="mb-3">
-          <label for="inputNameProv" class="form-label">Nama Provinsi</label>
+          <label for="inputNameKabKot" class="form-label">Nama Kabupaten/Kota</label>
             <input
               type="text"
               class="form-control"
-              id="inputNameProv"
-              name="inputNameProv"
-              value="{{data.name}}"
+              id="inputNameKabKot"
+              name="inputNameKabKot"
             />  
         </div>
         <div class="mb-3">
-          <label for="inputDiresmikanProv" class="form-label">Diresmikan</label>
+          <label for="inputDiresmikanKabKot" class="form-label">Diresmikan</label>
             <input
               type="text"
               class="form-control"
-              id="inputDiresmikanProv"
-              name="inputDiresmikanProv"
-              value="{{data.diresmikan}}"
+              id="inputDiresmikanKabKot"
+              name="inputDiresmikanKabKot"
             />  
         </div>
         <div class="mb-3">
-          <label for="inputPulauProv" class="form-label">Pulau</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputPulauProv"
-              name="inputPulauProv"
-              value="{{data.pulau}}"
-            />  
+          <label for="inputProvinsiId" class="form-label">Provinsi</label>
+          <select class="form-select" name="inputProvinsiId">
+            <option value="" selected hidden>Select Provinsi</option>
+            {{#each data}}
+            <option value={{this.id}} id="inputProvinsiId">{{this.name}}</option>
+            {{/each}}
+          </select>
         </div>
 
         <div class="mb-3">
@@ -50,16 +47,15 @@
             >
             <input
                 type="file"
-                name="inputImageProv"
+                name="inputImageKabKot"
                 id="formFile"
                 class="form-control"
-                value="{{data.img}}"
             />
         </div>
         <div class="mb-3">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end col-12">
               <button type="submit" class="btn btn-primary px-4 col-12">
-                Edit Data
+                Submit
               </button>
             </div>
         </div>

@@ -14,12 +14,11 @@
       <h1 class="col-6 text-primary">Provinsi & Kabupaten</h1>
       <div class="col-6 text-end">
          <a href="/add-provinsi"><button class="btn btn-primary rounded">Add Provinsi</button></a> 
-        <button class="btn btn-primary rounded">Add Kota/Kab</button>
+        <a href="/add-kabkot"><button class="btn btn-primary rounded">Add Kota/Kab</button></a>
       </div>
     </div>
     <div class="mb-3">
-      <select class="form-select" aria-label="Default select example" 
-      style="width: 200px;">
+      <select class="form-select" style="width: 200px;">
         <option selected hidden>Select pulau</option>
         <option value="sumatra">Sumatra</option>
         <option value="jawa">Jawa</option>
@@ -31,17 +30,19 @@
     <div class="row row-cols-md-4 row-cols-1">
       {{#each data}}
         <div class="col">
-          <div class="card" style="width: 16rem;">
-            <div class="d-flex justify-content-center">
+          <div class="card" style="width: 16rem; height: 18rem;">
+            <div class="d-flex justify-content-center pt-3">
               <img src="../uploads/{{this.img}}" class="card-img-top" alt="{{this.name}}" style="width: 120px;">
             </div>
+            <div class="d-flex align-items-end h-100">
             <div class="card-body">
               <h5 class="card-title text-center">{{this.name}}</h5>
               <p class="card-text text-center">{{this.diresmikan}}</p>
             </div>
+            </div>
           </div>
           <div class="d-flex justify-content-center" style="width: 16rem;">
-            <a href="/detail-provinsi/{{this.id}}">
+            <a href="/detail/{{this.id}}">
               <button class="btn btn-success mt-2 w-100">View Detail</button>
             </a>
           </div>

@@ -17,14 +17,14 @@
         <img src="../uploads/{{data.img}}" alt="{{data.name}}" style="width: 200px;">
       </div>
       <div class="col-6">
-        <h4>Nama Provinsi</h4>
+        <h4>Nama Provinsi / Nama Kota/Kabupaten</h4>
         <p>{{data.name}}</p>
         <h4>Diresmikan pada tanggal</h4>
         <p>{{data.diresmikan}}</p>
         <h4>Berada di pulau</h4>
         <p>{{data.pulau}}</p>
         <div class="mt-5">
-        <a href=""><button class="btn btn-success">Edit Data</button></a>
+        <a href="/edit/{{data.id}}"><button class="btn btn-success">Edit Data</button></a>
         <a href="/delete/{{data.id}}"><button class="btn btn-danger">Delete Data</button></a>
         </div>
       </div>
